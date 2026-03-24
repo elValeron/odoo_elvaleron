@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+
+        <template id="report_saleorder_document_inherit" inherit_id="sale.report_saleorder_document">
+
+            <xpath expr="//table[contains(@class, 'o_main_table')]" position="before">
+
+                <div><strong>New field</strong></div>
+
+                <div>
+                    <t t-if="doc.new_field"/>
+                    
+                    <t t-else="">Поле New Field пустое!!!</t>
+                </div>
+
+            </xpath>
+
+        </template>
+
+    </data>
+
+</odoo>
